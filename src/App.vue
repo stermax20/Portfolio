@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>First Vue Project</h1>
+  <div>
+    <FirstComponent />
+    <SecondComponent />
+    <ThirdComponent />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FirstComponent from '@/components/FirstComponent.vue';
+import SecondComponent from '@/components/SecondComponent.vue';
+import ThirdComponent from '@/components/ThirdComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+  },
+};
 </script>
 
+<!--Global style-->
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+h1, div {
+  font-family: arial;
+}
+</style>
+
+<!--Scoped style-->
+<style scoped>
+h1 {
+  color: blue;
 }
 </style>
